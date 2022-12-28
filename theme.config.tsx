@@ -37,11 +37,15 @@ const config: DocsThemeConfig = {
     </div>
   ),
   useNextSeoProps() {
-    const { frontMatter } = useConfig();
+    const { frontMatter, title } = useConfig();
 
     return {
       titleTemplate: "%s – Luau Course",
       description: frontMatter.description,
+      openGraph: {
+        title,
+        siteName: "Luau Course",
+      },
     };
   },
   head: <></>,
