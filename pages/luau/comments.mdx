@@ -1,0 +1,44 @@
+---
+description: Comments are additional text that can be used to explain what a piece of code does.
+---
+
+import { Callout } from "nextra-theme-docs"
+
+# Comments
+
+```lua
+-- Hello, this is a comment!
+```
+
+Comments are additional text that can be used to explain what a piece of code does. They're
+ignored by the computer. To create a comment, just put `--` and followed by any text you want.
+
+```lua
+print("Hello world!") -- This should print "Hello world!"
+```
+
+<Callout>
+
+Within most code editors, including Roblox Studio, you can select
+any text you want and press `CTRL` + `/` in order to comment the
+entire selection of text.
+
+</Callout>
+
+## Multi-line comments
+
+You can also create comments which span multiple lines.
+
+Such comment starts with `--[[` and ends with `]]`, you can also start it with
+`--[=[` and end it with `]=]`. The start and end must match however, so `--[[ Hello! ]=]` would not work.
+
+```lua
+--[[ Hello
+  this is
+  a multi-line
+comment ]]
+
+--[=[
+  This is also a multi-line comment.
+]=]
+```

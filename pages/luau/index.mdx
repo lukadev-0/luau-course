@@ -1,0 +1,73 @@
+---
+description: Introduction to Luau, the language used to script Roblox games.
+---
+
+import Image from "next/image"
+import { Callout } from "nextra-theme-docs"
+
+import viewExplorerOutputProperties from "../../images/view-explorer-output-properties.png"
+import insertScript from "../../images/insert-script.png"
+import soloPlay from "../../images/solo-play.png"
+import outputHelloWorld from "../../images/output-hello-world.png"
+
+# Introduction to Luau
+
+[Luau](https://luau-lang.org/) (lowercase u, /ˈlu.aʊ/) is a fast, small, safe, gradually typed embeddable
+scripting language derived from Lua.\
+What does that mean? I don't know either ¯\\\_(ツ)\_/¯.
+
+Luau is a scripting language which is based off of Lua 5.1, Luau is used to script Roblox games.
+
+## Creating a script
+
+<Callout>
+
+This is Roblox specific. You can also download Luau as a standalone executable
+in [their GitHub repository](https://github.com/Roblox/luau/releases).
+
+</Callout>
+
+Open Roblox Studio and create a new baseplate.
+
+You should have the **Explorer, Properties and Output** windows open. You can do this by going into the view
+tab and clicking on the Explorer, Properties and Output buttons.
+
+<p className="mt-6">
+  <Image alt={""} src={viewExplorerOutputProperties} quality={100} placeholder="blur" />
+</p>
+
+Now, lets create a script within `ServerScriptService`.
+Hover over `ServerScriptService` until you see a little + appear. Then select Script from within the menu.
+
+<p className="mt-6">
+  <Image alt={""} src={insertScript} quality={100} placeholder="blur" />
+</p>
+
+You should see the script editor appear, if it does not appear, or you've accidentaly closed it,
+double-click on the script to open it again.
+
+You should see the following code in the editor.
+
+```lua filename="ServerScriptService.Script"
+print("Hello world!")
+```
+
+This script will start whenever you play the game, press the Play button in the Home tab.
+
+<p className="mt-6">
+  <Image alt={""} src={soloPlay} quality={100} placeholder="blur" />
+</p>
+
+You should see "Hello world!" appear in the output window.
+
+<p className="mt-6">
+  <Image alt={""} src={outputHelloWorld} quality={100} placeholder="blur" />
+</p>
+
+Now change the script to
+
+```lua filename="ServerScriptService.Script"
+print("Hi!")
+```
+
+Press play again, the output should now be "Hi!", try making it print anything you want!

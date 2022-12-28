@@ -1,0 +1,50 @@
+---
+description: Variables allow you to store any piece of information.
+---
+
+# Variables
+
+Think of a box. This box has a name on it, and inside the box is a piece of information.
+That's basically a variable, its a box where you can store any information you want.
+
+## Defining variables
+
+```lua
+local myFavoriteNumber = 7
+print(myFavoriteNumber)
+```
+
+Try running this code, this code should print "7" to the output.
+
+The above code tells the computer that from now on, there is a variable named `myFavoriteNumber`, and
+its initial value is `7`.
+
+This is called **defining a variable**. We've defined a variable named `myFavoriteNumber` and **initialized**
+it with the value `7`.
+
+## Assigning Variables
+
+```lua
+local myFavoriteNumber = 7
+print(myFavoriteNumber) -- prints "7"
+
+myFavoriteNumber = 5
+print(myFavoriteNumber) -- prints "5"
+```
+
+This code should print 7, followed by a 5.
+We're changing the value of this variable to 5.
+
+This is known as an **assignment**, we're assigning or setting the variable to 5.
+
+## Uninitialized Variables
+
+You could also define a variable which doesn't have an initial value.
+
+```lua
+local foo
+print(foo) -- prints "nil"
+
+foo = 5
+print(foo) -- prints "5"
+```

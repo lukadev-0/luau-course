@@ -1,0 +1,89 @@
+---
+description: A data type is a type of data which a variable can represent.
+---
+
+import { Callout } from "nextra-theme-docs"
+
+# Data Types
+
+In the previous chapter we've discussed variables, which are named boxes which hold information inside
+of them.
+
+Now, what types of data can such variable hold? Such type is called a **data type**.
+
+## Primitive Data Types
+
+Primitive data types are the most basic kind of data type, any other data type is created
+using these data types.
+
+### Number
+
+Pretty self explanetory, a number is any number, it could be an integer, or a number with decimals.
+
+```lua
+local myFavoriteNumber = 7
+local pi = 3.14159265359
+```
+
+<Callout>
+
+You can get the value of pi using `math.pi`, we'll learn about the
+math library and other libraries in the next chapters.
+
+</Callout>
+
+### String
+
+A string is a string of characters, a list of characters, or simply just text.
+
+```lua
+local foo = "This is a string!"
+print(foo)
+```
+
+Strings start with a quote `"` and end with another quote `"`, you can also use
+single quotes `'`. If you want to use a quote inside of a string, like this:
+
+```lua
+local foo = "The boy said, "Hello!""
+```
+
+This will result in an error, it thinks you are trying to end the string. You can
+fix this by **escaping** the quote, this is done by putting a backslash infront of it `\`.
+
+```lua
+local foo = "The boy said, \"Hello!\""
+```
+
+You could also use single quotes.
+
+```lua
+local foo = 'The boy said, "Hello!"'
+```
+
+### Boolean
+
+A boolean is just `true` or `false`. This could mean yes or no,
+or if a condition is true or false, or if something is positive
+or negative. Any value with 2 states can be a boolean.
+
+```lua
+local foo = true
+local bar = false
+```
+
+### nil
+
+`nil` is a special keyword which represents nothing.
+
+```lua
+local nothing = nil
+```
+
+## The `typeof()` function
+
+`typeof` is a function like `print`, it gives you the type of the value you give it.
+
+```lua
+print(typeof("Foo")) -- prints "string"
+```

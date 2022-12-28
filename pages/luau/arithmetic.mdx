@@ -1,0 +1,64 @@
+---
+description: Arithmetic operations allow you to do basic arithmetic like addition, subtraction and multiplication.
+---
+
+# Arithmetic
+
+You can do basic arithmetic operations like addition, subtraction, multiplication,
+division, exponentation within code.
+
+```lua
+local sum = 1 + 5
+local exponent = 4 ^ 2
+```
+
+The above code will put the result of `1 + 5` and put that into the sum variable.
+If you print the variable, `6` should be displayed in the output.
+
+The following operations are supported:
+
+  - `+` Addition
+  - `-` Subtraction
+  - `*` Multiplication
+  - `/` Division
+  - `^` Exponentation
+
+These symbols are called **Arithmetic Operators**.
+
+You can put anything around these operators, such as variables.
+
+```lua
+local side = 5
+local area = side ^ 2
+```
+
+You can also chain multiple operators.
+
+```lua
+local a = 5
+local b = 5
+local c = 2
+
+print(a + b * c)
+```
+
+This will print `15`, not `20` as the order of operations is applied, meaning that multiplication is done before addition.
+
+You can also use paranthesis.
+
+```lua
+print((a + b) * c)
+```
+
+## Modulo Operation
+
+The modulo (also known as "modulus" or "mod") is the remainder after dividing one number by another.
+
+```lua
+local remainder = 5 % 2
+print(remainder)
+```
+
+This will print the remainder of 5 divided by 2, which is `1`. You can use the modulo
+operator to check if a number is even or odd. If `x % 2` is `0` then `x` is even, otherwise
+it is odd.
