@@ -4,6 +4,7 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/lukadev-0/luau-course",
   },
+  docsRepositoryBase: "https://github.com/lukadev-0/luau-course/blob/main",
   logo: (
     <div className="flex items-center space-x-2">
       <svg
