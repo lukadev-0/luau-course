@@ -1,3 +1,57 @@
 ---
 description: Comparisons allow you to compare two values.
 ---
+
+import { Callout } from "nextra-theme-docs"
+
+# Comparisons
+
+Comparisons allow you to compare two values, you can use it to check if
+two values are the same, or if a number is bigger than another number, etc.
+
+```lua
+local a = 5
+local b = 5
+print(a == b)
+```
+
+This will print `true`, a comparison will always result in a boolean, which is `true`
+or `false`.
+
+The `==` is called a comparison operator or a relational operator. The operator which is being
+used here is called the equality operator, it checks if two values are equal.
+
+<Callout>
+
+When comparing, **double equal signs** (`==`) are used, not a single equal sign (`=`).
+A single equal sign is used for variable assignments, whereas double equal signs are used to
+compare two values to check if they're equal.
+
+</Callout>
+
+## Comparing Numbers
+
+When comparing numbers, you can use the `>` and `<` operators. These check if
+a number is greater than a number or smaller than a number, respectively.
+
+```lua
+print(9 > 5) -- prints `true`
+print(9 < 5) -- prints `false`
+```
+
+You can also use `>=` and `<=` to check if they're greator/smaller or equal to.
+
+```lua
+print(9 < 9) -- prints `false`
+print(9 <= 9) -- prints `true` because 9 is equal to 9
+```
+
+## The not equal operator
+
+The not equal operator (`~=`) checks if two values are **not** equal, it does the opposite
+of the equality operator (`==`).
+
+```lua
+print(9 ~= 9) -- prints `false`
+print(5 ~= 9) -- prints `true`
+```
