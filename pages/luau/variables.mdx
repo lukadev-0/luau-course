@@ -1,11 +1,15 @@
 ---
-description: Variables allow you to store any piece of information.
+description: >
+  Variables are like a box with a name, and inside of this box, 
+  you can store a number, some text, or any piece of information.
 ---
+
+import { Tabs, Tab } from "nextra-theme-docs"
 
 # Variables
 
-Think of a box. This box has a name on it, and inside the box is a piece of information.
-That's basically a variable, its a box where you can store any information you want.
+Variables are like a box with a name, and inside of this box, you can store a number,
+some text, or any piece of information.
 
 ## Defining variables
 
@@ -19,8 +23,24 @@ Try running this code, this code should print "7" to the output.
 The above code tells the computer that from now on, there is a variable named `myFavoriteNumber`, and
 its initial value is `7`.
 
-This is called **defining a variable**. We've defined a variable named `myFavoriteNumber` and **initialized**
-it with the value `7`.
+This is called **defining a variable**, defining a variable is done by typing `local` followed by the
+name of the variable, also known as the **identifier**. Then an equal sign (`=`) followed by the initial
+value of the variable.
+
+```lua
+local identifier = initialValue
+```
+
+An identifier can only contain lowercase and uppercase letters from A-Z, digits from 0-9 and underscores (`_`),
+it can also not start with a number, meaning `0foo` is invalid.
+
+After defining the variable, you can refer to this variable using the name of the variable, you can then use this
+and pass it to *functions* or do math with it.
+
+### What does `local` mean?
+
+`local` is used to specify that the variable is a *local variable*, meaning it is *scoped*. We will learn more about
+*Scoping* in the future.
 
 ## Assigning Variables
 
@@ -48,3 +68,26 @@ print(foo) -- prints "nil"
 foo = 5
 print(foo) -- prints "5"
 ```
+
+## Coding Challenge
+
+<Tabs items={["Challenge", "Solution"]}>
+  <Tab>
+    Create a variable named `foo` initialized with the value `"Bob"` and print
+    the variable `foo`. Then, assign variable `foo` to `"Alice"` and print the variable `foo`.
+
+    ```txt filename="Expected Output"
+    Bob
+    Alice
+    ```
+  </Tab>
+  <Tab>
+    ```lua
+    local foo = "Bob"
+    print(foo)
+
+    foo = "Alice"
+    print(foo)
+    ```
+  </Tab>
+</Tabs>

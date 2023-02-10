@@ -9,12 +9,15 @@ import { Callout } from "nextra-theme-docs"
 In the previous chapter we've discussed variables, which are named boxes which hold information inside
 of them.
 
-Now, what types of data can such variable hold? Such type is called a **data type**.
+Now, what can a variable store? We've seen it store numbers (like `20`)
+and text (like `"Bob"`).
+
+A variable can store much more, the types of things a variable can store is called a **data type**.
 
 ## Primitive Data Types
 
 Primitive data types are the most basic kind of data type, any other data type is created
-using these data types.
+using these data types. We will only learn about primitive data types for now.
 
 ### Number
 
@@ -28,13 +31,13 @@ local pi = 3.14159265359
 <Callout>
 
 You can get the value of pi using `math.pi`, we'll learn about the
-math library and other libraries in the next chapters.
+math library and other libraries in the future.
 
 </Callout>
 
 ### String
 
-A string is a string of characters, a list of characters, or simply just text.
+A string is a string of characters, or a list of characters, or simply just text.
 
 ```lua
 local foo = "This is a string!"
@@ -74,7 +77,8 @@ local bar = false
 
 ### nil
 
-`nil` is a special keyword which represents nothing.
+`nil` is a special keyword which represents nothing. This can be used to specify that a value
+does not exist. For example, a `winner` variable which is `nil` if the game resulted in a draw.
 
 ```lua
 local nothing = nil

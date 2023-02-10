@@ -2,13 +2,13 @@
 description: Introduction to Luau, the language used to script Roblox games.
 ---
 
-import Image from "next/image"
-import { Callout } from "nextra-theme-docs"
+import Image from "next/image";
+import { Callout, Tabs, Tab } from "nextra-theme-docs";
 
-import viewExplorerOutputProperties from "../../images/view-explorer-output-properties.png"
-import insertScript from "../../images/insert-script.png"
-import soloPlay from "../../images/solo-play.png"
-import outputHelloWorld from "../../images/output-hello-world.png"
+import viewExplorerOutputProperties from "../../images/view-explorer-output-properties.png";
+import insertScript from "../../images/insert-script.png";
+import soloPlay from "../../images/solo-play.png";
+import outputHelloWorld from "../../images/output-hello-world.png";
 
 # Introduction to Luau
 
@@ -16,58 +16,131 @@ import outputHelloWorld from "../../images/output-hello-world.png"
 scripting language derived from Lua.\
 What does that mean? I don't know either ¯\\\_(ツ)\_/¯.
 
-Luau is a scripting language which is based off of Lua 5.1, Luau is used to script Roblox games.
+Luau is the language used to script Roblox games, if you're looking to learn scripting on Roblox, you're
+in the right place!
 
-## Creating a script
+Luau is derived from Lua 5.1, if you're already experienced with Lua, you should be able to learn very
+quickly!
 
-<Callout>
+## Getting started
 
-This is Roblox specific. You can also download Luau as a standalone executable
-in [their GitHub repository](https://github.com/Roblox/luau/releases).
+Lets create a script and run it, you can choose between creating a script
+on Roblox, or by using Luau as a standalone executable.
 
-</Callout>
+<Tabs items={["Roblox", "Standalone (Advanced)"]}>
+  <Tab>
+    <ol className="list-decimal pl-8 space-y-8">
+      <li>
+        Open Roblox Studio and create a baseplate.
+      </li>
 
-Open Roblox Studio and create a new baseplate.
+      <li>
+        You should have the **Explorer, Properties and Output** windows open. You can do this by going into the view
+        tab and clicking on the Explorer, Properties and Output buttons.
 
-You should have the **Explorer, Properties and Output** windows open. You can do this by going into the view
-tab and clicking on the Explorer, Properties and Output buttons.
+        <p className="mt-6">
+          <Image alt={""} src={viewExplorerOutputProperties} quality={100} placeholder="blur" />
+        </p>
+      </li>
 
-<p className="mt-6">
-  <Image alt={""} src={viewExplorerOutputProperties} quality={100} placeholder="blur" />
-</p>
+      <li>
+        Lets create a script within `ServerScriptService`.
+        Hover over `ServerScriptService` until you see a little + appear. Then select **Script** from within
+        the menu.
 
-Now, lets create a script within `ServerScriptService`.
-Hover over `ServerScriptService` until you see a little + appear. Then select Script from within the menu.
+        <p className="mt-6">
+          <Image alt={""} src={insertScript} quality={100} placeholder="blur" />
+        </p>
+      </li>
 
-<p className="mt-6">
-  <Image alt={""} src={insertScript} quality={100} placeholder="blur" />
-</p>
+      <li>
+        You should see the script editor appear, if it does not appear, or you've accidentaly closed it,
+        double-click on the script to open it again.
 
-You should see the script editor appear, if it does not appear, or you've accidentaly closed it,
-double-click on the script to open it again.
+        You should see the following code in the editor.
 
-You should see the following code in the editor.
+        ```lua filename="ServerScriptService.Script"
+        print("Hello world!")
+        ```
 
-```lua filename="ServerScriptService.Script"
-print("Hello world!")
-```
+        This script will start whenever you play the game.
 
-This script will start whenever you play the game, press the Play button in the Home tab.
+        <p className="mt-6">
+          <Image alt={""} src={soloPlay} quality={100} placeholder="blur" />
+        </p>
+      </li>
 
-<p className="mt-6">
-  <Image alt={""} src={soloPlay} quality={100} placeholder="blur" />
-</p>
+      <li>
+        You should see "Hello world!" appear in the output window.
 
-You should see "Hello world!" appear in the output window.
+        <p className="mt-6">
+          <Image alt={""} src={outputHelloWorld} quality={100} placeholder="blur" />
+        </p>
+      </li>
 
-<p className="mt-6">
-  <Image alt={""} src={outputHelloWorld} quality={100} placeholder="blur" />
-</p>
+      <li>
+        Change the script to
 
-Now change the script to
+        ```lua filename="ServerScriptService.Script"
+        print("Hi!")
+        ```
+      </li>
 
-```lua filename="ServerScriptService.Script"
-print("Hi!")
-```
+      <li>
+        Press play again, the output should now be "Hi!".
+      </li>
+    </ol>
+  </Tab>
+  <Tab>
+    <div className="-mt-6">
+      <Callout>
+        Using Luau as a standalone executable is a bit more complicated, this is not recommended
+        unless you're experienced with the command line.
+      </Callout>
+    </div>
 
-Press play again, the output should now be "Hi!", try making it print anything you want!
+    1. Download Luau from [the latest release](https://github.com/Roblox/luau/releases).
+    2. Add the `luau` executable onto your `PATH`
+    3. Create a new file named `hello.luau`
+    4. Put the following code:
+
+        ```lua filename="hello.luau"
+        print("Hello world!")
+        ```
+
+    5. In the same directory as the file, run the following command:
+
+        ```zsh
+        $ luau hello.luau
+        ```
+
+        You should now see "Hello world!" printed in the terminal.
+
+    6. Change the file to
+
+        ```lua filename="hello.luau"
+        print("Hi!")
+        ```
+
+        Now run the code again, you should now see "Hi!" printed in the terminal.
+
+  </Tab>
+</Tabs>
+
+## Coding Challenge
+
+<Tabs items={['Challenge', 'Solution']}>
+  <Tab>
+    Instead of printing "Hi!" make it print "Howdy!".
+
+    ```txt filename="Expected Output"
+    Howdy!
+    ```
+
+  </Tab>
+  <Tab>
+    ```lua /Howdy!/
+    print("Howdy!")
+    ```
+  </Tab>
+</Tabs>
