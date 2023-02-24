@@ -2,9 +2,9 @@ import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   project: {
-    link: "https://github.com/lukadev-0/luau-course",
+    link: "https://github.com/lukadev-0/luau-guide",
   },
-  docsRepositoryBase: "https://github.com/lukadev-0/luau-course/blob/main",
+  docsRepositoryBase: "https://github.com/lukadev-0/luau-guide/blob/main",
   logo: (
     <div className="flex items-center space-x-2">
       <svg
@@ -34,18 +34,18 @@ const config: DocsThemeConfig = {
           fill="white"
         />
       </svg>
-      <strong>Luau Course</strong>
+      <strong>Luau Guide</strong>
     </div>
   ),
   useNextSeoProps() {
     const { frontMatter, title } = useConfig();
 
     return {
-      titleTemplate: "%s – Luau Course",
+      titleTemplate: "%s – Luau Guide",
       description: frontMatter.description,
       openGraph: {
         title,
-        siteName: "Luau Course",
+        siteName: "Luau Guide",
       },
     };
   },
